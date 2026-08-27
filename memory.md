@@ -190,3 +190,11 @@
 - 首次提交为 `83dee8d`（`Initial launch-ready Fatal Frontier 1869 Wiki`），包含 76 个项目文件；提交前 `scripts/audit_site.py` 与 `git diff --cached --check` 均通过。
 - 终端访问 GitHub HTTPS 路线超时，但现有 GitHub SSH 身份验证成功，因此远端使用 `git@github.com:zhaobingkun/fatalfrontier1869.git`。
 - 确认远端为空后，将本地 `main` 成功推送到 `origin/main` 并建立跟踪关系。
+
+## 2026-08-27 每日官方更新定时任务
+
+- 在 Codex 定时任务列表创建并启用 `Fatal Frontier 1869 daily official update`，automation id 为 `fatal-frontier-1869-daily-official-update`。
+- 任务按 Asia/Shanghai 本地时间每天 09:00 运行，使用 `gpt-5.6-luna` 与 high reasoning。
+- Codex 保存的旧项目仍指向 `/Users/zhaobingkun/dev/FatalFrontier1898`，因此该任务采用本地 projectless cron，并在任务提示中强制进入真实 Git 仓库 `/Users/zhaobingkun/dev/FatalFrontier1869`，避免更新旧 MVP 目录。
+- 每天检查官方 Community、FAQ、Terms、Support、下载、Reviews、Pioneers 与补丁来源；只有新的可验证官方变化才更新页面、运行 SEO/语法/XML/diff 审计、提交并推送 `origin/main`。
+- 无官方变化时不修改文件、不更新 memory、不提交、不推送；发现用户未提交改动、拉取失败或验证失败时停止并报告，禁止 force push、reset hard、覆盖或删除用户文件。

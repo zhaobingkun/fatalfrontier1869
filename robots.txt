@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://fatalfrontier1869.wiki/sitemap.xml

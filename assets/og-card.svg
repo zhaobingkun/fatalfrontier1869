@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#050505"/>
+  <path d="M-80 500C180 220 320 590 550 290s310-80 730-330" fill="none" stroke="#e0c27a" stroke-opacity=".24" stroke-width="2"/>
+  <path d="M-40 610C230 300 360 650 620 350s340-120 660-310" fill="none" stroke="#e0c27a" stroke-opacity=".18" stroke-width="2"/>
+  <path d="M690 100 830 50l90 130 105-78 140 280H680Z" fill="none" stroke="#e0c27a" stroke-width="3" opacity=".75"/>
+  <circle cx="965" cy="310" r="18" fill="#b39250"/>
+  <text x="84" y="145" fill="#e0c27a" font-family="Arial Narrow, sans-serif" font-size="20" letter-spacing="5">UNOFFICIAL FIELD GUIDE / EARLY ACCESS</text>
+  <text x="80" y="300" fill="#fffdf7" font-family="Georgia, serif" font-size="86" font-weight="700">Fatal Frontier</text>
+  <text x="84" y="378" fill="#e0c27a" font-family="Georgia, serif" font-size="64" font-weight="700">1869 Wiki</text>
+  <text x="86" y="475" fill="#fffdf7" fill-opacity=".7" font-family="monospace" font-size="19" letter-spacing="2">READ THE LAND. RETURN ALIVE.</text>
+</svg>

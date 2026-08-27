@@ -198,3 +198,10 @@
 - Codex 保存的旧项目仍指向 `/Users/zhaobingkun/dev/FatalFrontier1898`，因此该任务采用本地 projectless cron，并在任务提示中强制进入真实 Git 仓库 `/Users/zhaobingkun/dev/FatalFrontier1869`，避免更新旧 MVP 目录。
 - 每天检查官方 Community、FAQ、Terms、Support、下载、Reviews、Pioneers 与补丁来源；只有新的可验证官方变化才更新页面、运行 SEO/语法/XML/diff 审计、提交并推送 `origin/main`。
 - 无官方变化时不修改文件、不更新 memory、不提交、不推送；发现用户未提交改动、拉取失败或验证失败时停止并报告，禁止 force push、reset hard、覆盖或删除用户文件。
+
+## 2026-08-27 Google Analytics 4 接入
+
+- 按用户提供的 GA4 Measurement ID `G-KMLT9384LR`，将标准 Google tag 写入全站 35 个 HTML 的 `</head>` 前；每页恰好一份 loader 和一份 config，包含 `404.html`。
+- `scripts/normalize_social_meta.py` 增加幂等注入逻辑，重复运行不会产生重复统计代码；`scripts/audit_site.py` 增加 GA loader 与 config 的完整性/唯一性检查，避免后续新增页面漏装或重复安装。
+- `privacy.html` 和 `about.html` 已按实际配置更新，披露 Google Analytics 4、可能使用的 cookies 或类似存储、常见技术数据、Google Privacy Policy 与官方 opt-out 工具；不再保留“无 analytics”的旧说法。
+- 接入后全站审计仍为 35 个 HTML、34 个可收录页面、34 个唯一 title/canonical、34 条 sitemap，错误 0、警告 0；JavaScript 语法、sitemap XML 与 Git diff whitespace 检查通过。

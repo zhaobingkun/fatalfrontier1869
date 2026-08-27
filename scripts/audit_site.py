@@ -14,6 +14,7 @@ from urllib.parse import unquote, urlparse
 
 ROOT = Path(__file__).resolve().parents[1]
 ORIGIN = "https://fatalfrontier1869.wiki"
+GOOGLE_TAG_ID = "G-KMLT9384LR"
 
 
 class PageParser(HTMLParser):
@@ -136,6 +137,10 @@ def main() -> int:
             errors.append(f"{rel}: expected 1 H1, found {len(parser.h1_parts)}")
         if "1898" in raw or "localhost" in raw or "127.0.0.1" in raw:
             errors.append(f"{rel}: stale project name or local URL found")
+        if raw.count(f"googletagmanager.com/gtag/js?id={GOOGLE_TAG_ID}") != 1:
+            errors.append(f"{rel}: expected exactly 1 Google tag loader")
+        if raw.count(f"gtag('config', '{GOOGLE_TAG_ID}')") != 1:
+            errors.append(f"{rel}: expected exactly 1 Google tag config")
 
         if indexable:
             required_meta = [

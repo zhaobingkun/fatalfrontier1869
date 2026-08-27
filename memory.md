@@ -181,3 +181,12 @@
 - 最终静态审计：35 个 HTML，其中 34 个可收录页面；34 个唯一 title、34 个唯一 canonical、34 条 sitemap；错误 0、警告 0。Node 语法与 sitemap XML 验证通过。
 - 最终本地 HTTP 审计：34 条 sitemap URL 全部返回 200。浏览器桌面 1440×900 与手机 390×844 验收通过，关键插图全部加载、无横向溢出、手机菜单正常、返回/前进正常、控制台错误和警告为 0。
 - 建立 `LAUNCH-CHECKLIST.md`。站内代码与内容已经 ready to deploy，但 `fatalfrontier1869.wiki` 仍无 DNS 解析，项目也没有托管绑定；正式上线还需要选择静态托管、绑定域名、启用 HTTPS、配置自定义 404、按实际托管/统计更新 Privacy，并在发布后提交 Search Console 与 sitemap。
+
+## 2026-08-27 GitHub 仓库初始化与上传
+
+- 用户购买 `fatalfrontier1869.wiki` 并创建 GitHub 仓库 `https://github.com/zhaobingkun/fatalfrontier1869`。
+- 项目初始化为 Git 仓库，默认分支为 `main`；提交身份沿用现有项目中的 `zhaobingkun <zhaobingkun@139.com>`。
+- 新增 `.gitignore` 与 `README.md`，README 记录项目定位、本地预览、审计命令、无构建部署方式和非官方声明。
+- 首次提交为 `83dee8d`（`Initial launch-ready Fatal Frontier 1869 Wiki`），包含 76 个项目文件；提交前 `scripts/audit_site.py` 与 `git diff --cached --check` 均通过。
+- 终端访问 GitHub HTTPS 路线超时，但现有 GitHub SSH 身份验证成功，因此远端使用 `git@github.com:zhaobingkun/fatalfrontier1869.git`。
+- 确认远端为空后，将本地 `main` 成功推送到 `origin/main` 并建立跟踪关系。

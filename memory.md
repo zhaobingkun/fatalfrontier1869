@@ -205,3 +205,13 @@
 - `scripts/normalize_social_meta.py` 增加幂等注入逻辑，重复运行不会产生重复统计代码；`scripts/audit_site.py` 增加 GA loader 与 config 的完整性/唯一性检查，避免后续新增页面漏装或重复安装。
 - `privacy.html` 和 `about.html` 已按实际配置更新，披露 Google Analytics 4、可能使用的 cookies 或类似存储、常见技术数据、Google Privacy Policy 与官方 opt-out 工具；不再保留“无 analytics”的旧说法。
 - 接入后全站审计仍为 35 个 HTML、34 个可收录页面、34 个唯一 title/canonical、34 条 sitemap，错误 0、警告 0；JavaScript 语法、sitemap XML 与 Git diff whitespace 检查通过。
+
+## 2026-08-27 PSI 第一轮性能优化
+
+- 基线报告：桌面 Performance 97、Accessibility 94；移动 Performance 60、Accessibility 95。移动端 FCP 3.5s、LCP 5.1s、TBT 210ms、CLS 0.165，主要瓶颈为 Google Fonts 跨域渲染链、CSS 背景首屏图发现较晚、字体/媒体布局变化和第三方统计脚本。
+- 按用户确认，第一轮保持 GA4 `G-KMLT9384LR` 与 Cloudflare Insights 不动，只处理字体、LCP、CLS、CSS 和无障碍。
+- 将 Rye、Space Grotesk、Barlow Condensed、DM Mono 的 Latin WOFF2 本地托管，移除 `fonts.googleapis.com` 与 `fonts.gstatic.com` 依赖；全站预加载首屏 Rye 和 Space Grotesk，字体保留 SIL Open Font License 1.1 说明。
+- 首页 `frontier-hero.jpg` 从约 272KB 转为桌面 `frontier-hero.webp` 约 84KB、移动 `frontier-hero-mobile.webp` 约 32KB；使用 `image-set()` 保留 JPEG 回退，并按 860px 媒体条件在 HTML 中预加载对应 WebP。
+- 页脚版权行颜色改为 `#aaa39a`，修复 PSI 报告的 3 个低对比度元素；全站品牌首页链接删除与可见文本不一致的 `aria-label`，使用链接文本作为无障碍名称。
+- 动态插图补充固有尺寸、lazy loading 与 async decoding，插图区增加 3:2 aspect ratio；本地 390×844 验收无横向溢出并正确加载移动首屏图。
+- 新增 `vercel.json`，为 `/assets/fonts/*` 配置一年 immutable 缓存；资源版本更新为 `20260827c`。审计脚本新增外部 Google Fonts 残留与关键本地字体检查。

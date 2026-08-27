@@ -11,8 +11,12 @@ ROOT = Path(__file__).resolve().parents[1]
 FALLBACK_IMAGE = "https://fatalfrontier1869.wiki/assets/og-card.svg"
 OLD_DOWNLOAD = "https://pdg-prod-cdn-gngbazgkbqcza6fg.z01.azurefd.net/"
 OFFICIAL_DOWNLOAD = "https://www.fatalfrontier.com/lpdownload"
-ASSET_VERSION = "20260827b"
+ASSET_VERSION = "20260827c"
 GOOGLE_TAG_ID = "G-KMLT9384LR"
+FONT_PRELOADS = (
+    '<link rel="preload" href="/assets/fonts/rye-400-latin.woff2" as="font" type="font/woff2" crossorigin>'
+    '<link rel="preload" href="/assets/fonts/space-grotesk-latin-variable.woff2" as="font" type="font/woff2" crossorigin>'
+)
 GOOGLE_TAG = f'''<!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id={GOOGLE_TAG_ID}"></script>
 <script>
@@ -69,8 +73,20 @@ for path in sorted(ROOT.rglob("*.html")):
     text = path.read_text(encoding="utf-8")
     before = text
     text = text.replace(OLD_DOWNLOAD, OFFICIAL_DOWNLOAD)
+    text = re.sub(
+        r'<a class="brand" href="/" aria-label="Fatal Frontier 1869 Wiki home">',
+        '<a class="brand" href="/">',
+        text,
+    )
     text = re.sub(r'href="/styles\.css(?:\?v=[^"]+)?"', f'href="/styles.css?v={ASSET_VERSION}"', text)
     text = re.sub(r'src="/script\.js(?:\?v=[^"]+)?"', f'src="/script.js?v={ASSET_VERSION}"', text)
+    if "/assets/fonts/rye-400-latin.woff2" not in text:
+        text = re.sub(
+            r'(<link rel="icon" href="/assets/favicon\.svg" type="image/svg\+xml">)',
+            rf'\1{FONT_PRELOADS}',
+            text,
+            count=1,
+        )
     if f"gtag/js?id={GOOGLE_TAG_ID}" not in text:
         text = text.replace("</head>", f"{GOOGLE_TAG}</head>", 1)
     if path.name == "404.html":

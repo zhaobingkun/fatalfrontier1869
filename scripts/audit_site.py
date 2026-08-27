@@ -223,6 +223,16 @@ def main() -> int:
     if expected_sitemap not in robots:
         errors.append("robots.txt: production sitemap URL missing")
 
+    stylesheet = (ROOT / "styles.css").read_text(encoding="utf-8")
+    if "fonts.googleapis.com" in stylesheet or "fonts.gstatic.com" in stylesheet:
+        errors.append("styles.css: external Google Fonts dependency remains")
+    for font in [
+        "assets/fonts/rye-400-latin.woff2",
+        "assets/fonts/space-grotesk-latin-variable.woff2",
+    ]:
+        if not (ROOT / font).exists():
+            errors.append(f"missing critical local font {font}")
+
     print(f"HTML files: {len(html_files)}")
     print(f"Indexable pages: {len(canonicals)}")
     print(f"Unique titles: {len(titles)}")

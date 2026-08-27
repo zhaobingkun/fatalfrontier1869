@@ -77,7 +77,7 @@ const enhanceIllustrations = () => {
   if (article?.querySelector('#claims') && !article.querySelector('.article-illustration')) {
     const figure = document.createElement('figure');
     figure.className = 'article-illustration';
-    figure.innerHTML = '<img src="/assets/frontier-kit.jpg" alt="Antique frontier field kit with a shotgun, pickaxe, compass and gold pan"><figcaption>Field kit reference: weapons, tools and a gold pan belong to the practical loop of the frontier.</figcaption>';
+    figure.innerHTML = '<img src="/assets/frontier-kit.jpg" width="1200" height="800" loading="lazy" decoding="async" alt="Antique frontier field kit with a shotgun, pickaxe, compass and gold pan"><figcaption>Field kit reference: weapons, tools and a gold pan belong to the practical loop of the frontier.</figcaption>';
     article.insertBefore(figure, article.querySelector('#claims'));
   }
   const isPioneerHub = normalizePath(window.location.pathname) === '/pioneers/';
@@ -86,7 +86,7 @@ const enhanceIllustrations = () => {
     if (section) {
       const figure = document.createElement('figure');
       figure.className = 'roster-illustration container';
-      figure.innerHTML = '<img src="/assets/pioneer-roster.jpg" alt="Eight anonymous Fatal Frontier 1869 pioneer roles on the frontier"><figcaption>A visual field note for the current Pioneer roster covered by this wiki.</figcaption>';
+      figure.innerHTML = '<img src="/assets/pioneer-roster.jpg" width="1200" height="800" loading="lazy" decoding="async" alt="Eight anonymous Fatal Frontier 1869 pioneer roles on the frontier"><figcaption>A visual field note for the current Pioneer roster covered by this wiki.</figcaption>';
       section.parentNode.insertBefore(figure, section);
     }
   }

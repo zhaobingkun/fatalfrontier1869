@@ -23,6 +23,14 @@ Then open `http://localhost:4173/`.
 
 ## Quality checks
 
+After changing `styles.css`, synchronize the homepage inline copy first:
+
+```bash
+python3 scripts/inline_home_css.py
+```
+
+Then run the launch checks:
+
 ```bash
 python3 scripts/audit_site.py
 node --check script.js

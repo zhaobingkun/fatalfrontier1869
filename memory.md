@@ -215,3 +215,13 @@
 - 页脚版权行颜色改为 `#aaa39a`，修复 PSI 报告的 3 个低对比度元素；全站品牌首页链接删除与可见文本不一致的 `aria-label`，使用链接文本作为无障碍名称。
 - 动态插图补充固有尺寸、lazy loading 与 async decoding，插图区增加 3:2 aspect ratio；本地 390×844 验收无横向溢出并正确加载移动首屏图。
 - 新增 `vercel.json`，为 `/assets/fonts/*` 配置一年 immutable 缓存；资源版本更新为 `20260827c`。审计脚本新增外部 Google Fonts 残留与关键本地字体检查。
+
+## 2026-08-28 PSI 第二轮安全性能优化
+
+- 第一轮上线后的 PSI 复测：桌面 Performance / Accessibility / Best Practices / SEO 全部 100；移动 Performance 77，其余三项 100。移动 FCP 3.1s、LCP 4.2s、TBT 50ms、CLS 0，较首轮基线已有明显改善。
+- 剩余首要瓶颈是首页 `styles.css` 渲染阻塞（PSI 估算约 600ms）及 CSS 发现后的 5 个 Barlow Condensed / DM Mono 字体请求；GA4 仍约 70KB 未使用 JavaScript，并出现约 42ms 强制重排。
+- 用户同意在无明显风险前提下继续。采用可回退方案：仅首页内联现有完整 `styles.css`，内页继续使用带版本号的外部样式；不做关键 CSS 自动裁剪，避免漏样式和交互回归。
+- 新增 `scripts/inline_home_css.py`，每次 CSS 变更后将其同步进首页；`scripts/audit_site.py` 会检查首页只有一份内联样式、无外部阻塞 CSS，且内联内容与 `styles.css` 完全一致。README 已记录同步命令。
+- Barlow Condensed 统一使用 600，DM Mono 统一使用 400，将这两组字体的潜在网络请求从 5 个降为 2 个；Rye 与 Space Grotesk 保持不变，未改变页面排版体系。
+- 资源版本更新为 `20260828a`。本地首页确认没有 stylesheet link，完整内联 CSS 生效；桌面 1280px 与手机 390×844 均无横向溢出，手机菜单正常，实际请求只包含 Barlow 600 与 DM Mono 400。
+- GA4 `G-KMLT9384LR` 和 Cloudflare Browser Insights 在本轮代码发布中保持不变。后续只有在 Cloudflare Zaraz 预览/实时数据确认 page_view 正常且无重复后，才移除页面内 gtag；无法验证时维持当前实现。

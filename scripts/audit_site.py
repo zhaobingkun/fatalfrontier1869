@@ -33,6 +33,7 @@ class PageParser(HTMLParser):
         self._in_h1 = False
         self._in_json_ld = False
         self._json_parts: list[str] = []
+        self._ignored_text_depth = 0
 
     def handle_starttag(self, tag: str, attrs: list[tuple[str, str | None]]) -> None:
         data = {key.lower(): value or "" for key, value in attrs}
@@ -55,6 +56,8 @@ class PageParser(HTMLParser):
         elif tag == "script" and data.get("type", "").lower() == "application/ld+json":
             self._in_json_ld = True
             self._json_parts = []
+        if tag in {"script", "style"}:
+            self._ignored_text_depth += 1
 
     def handle_endtag(self, tag: str) -> None:
         tag = tag.lower()
@@ -65,6 +68,8 @@ class PageParser(HTMLParser):
         elif tag == "script" and self._in_json_ld:
             self.json_ld.append("".join(self._json_parts).strip())
             self._in_json_ld = False
+        if tag in {"script", "style"} and self._ignored_text_depth:
+            self._ignored_text_depth -= 1
 
     def handle_data(self, data: str) -> None:
         if self._in_title:
@@ -73,7 +78,7 @@ class PageParser(HTMLParser):
             self.h1_parts[-1].append(data)
         if self._in_json_ld:
             self._json_parts.append(data)
-        if data.strip() and not self._in_json_ld:
+        if data.strip() and not self._in_json_ld and not self._ignored_text_depth:
             self.text_parts.append(data)
 
 
@@ -141,6 +146,17 @@ def main() -> int:
             errors.append(f"{rel}: expected exactly 1 Google tag loader")
         if raw.count(f"gtag('config', '{GOOGLE_TAG_ID}')") != 1:
             errors.append(f"{rel}: expected exactly 1 Google tag config")
+        if rel == "index.html":
+            if raw.count('<style id="site-css">') != 1:
+                errors.append(f"{rel}: expected exactly 1 inline site stylesheet")
+            if re.search(r'<link rel="stylesheet" href="/styles\.css', raw):
+                errors.append(f"{rel}: homepage must not load render-blocking styles.css")
+            inline_match = re.search(
+                r'<style id="site-css">\s*(.*?)\s*</style>', raw, re.DOTALL
+            )
+            expected_css = (ROOT / "styles.css").read_text(encoding="utf-8").strip()
+            if not inline_match or inline_match.group(1).strip() != expected_css:
+                errors.append(f"{rel}: inline site CSS is out of sync with styles.css")
 
         if indexable:
             required_meta = [

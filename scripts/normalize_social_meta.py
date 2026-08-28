@@ -11,7 +11,7 @@ ROOT = Path(__file__).resolve().parents[1]
 FALLBACK_IMAGE = "https://fatalfrontier1869.wiki/assets/og-card.svg"
 OLD_DOWNLOAD = "https://pdg-prod-cdn-gngbazgkbqcza6fg.z01.azurefd.net/"
 OFFICIAL_DOWNLOAD = "https://www.fatalfrontier.com/lpdownload"
-ASSET_VERSION = "20260827c"
+ASSET_VERSION = "20260828a"
 GOOGLE_TAG_ID = "G-KMLT9384LR"
 FONT_PRELOADS = (
     '<link rel="preload" href="/assets/fonts/rye-400-latin.woff2" as="font" type="font/woff2" crossorigin>'

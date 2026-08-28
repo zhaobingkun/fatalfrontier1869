@@ -225,3 +225,5 @@
 - Barlow Condensed 统一使用 600，DM Mono 统一使用 400，将这两组字体的潜在网络请求从 5 个降为 2 个；Rye 与 Space Grotesk 保持不变，未改变页面排版体系。
 - 资源版本更新为 `20260828a`。本地首页确认没有 stylesheet link，完整内联 CSS 生效；桌面 1280px 与手机 390×844 均无横向溢出，手机菜单正常，实际请求只包含 Barlow 600 与 DM Mono 400。
 - GA4 `G-KMLT9384LR` 和 Cloudflare Browser Insights 在本轮代码发布中保持不变。后续只有在 Cloudflare Zaraz 预览/实时数据确认 page_view 正常且无重复后，才移除页面内 gtag；无法验证时维持当前实现。
+- 安全优化提交 `9510447`（`Remove homepage render blocking CSS`）已推送到 `origin/main` 并由 Vercel 自动部署。生产首页已确认返回 `<style id="site-css">`、四组最终字体声明和原 GA4 loader；Barlow 600 字体响应带 `Cache-Control: public, max-age=31536000, immutable`。
+- Cloudflare 控制台在自动化只读检查中持续超时，Google PSI API 复测也在 90 秒后超时；因此没有尝试发布 Zaraz、关闭 Browser Insights 或删除 gtag。这里按“无法验证就不切换”处理，避免统计丢失或重复 page_view。

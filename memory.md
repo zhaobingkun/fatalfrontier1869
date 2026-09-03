@@ -227,3 +227,12 @@
 - GA4 `G-KMLT9384LR` 和 Cloudflare Browser Insights 在本轮代码发布中保持不变。后续只有在 Cloudflare Zaraz 预览/实时数据确认 page_view 正常且无重复后，才移除页面内 gtag；无法验证时维持当前实现。
 - 安全优化提交 `9510447`（`Remove homepage render blocking CSS`）已推送到 `origin/main` 并由 Vercel 自动部署。生产首页已确认返回 `<style id="site-css">`、四组最终字体声明和原 GA4 loader；Barlow 600 字体响应带 `Cache-Control: public, max-age=31536000, immutable`。
 - Cloudflare 控制台在自动化只读检查中持续超时，Google PSI API 复测也在 90 秒后超时；因此没有尝试发布 Zaraz、关闭 Browser Insights 或删除 gtag。这里按“无法验证就不切换”处理，避免统计丢失或重复 page_view。
+
+## 2026-09-04 内容丰富与官方更新批次
+
+- 用户授权今天直接完成并上线一版，后续推进不再中途询问；本批次选择加深现有页面，而不是为了词数批量制造薄 URL。
+- 根据只读内容审计，首页从约 593 词补到约 772 词；Updates、Reviews、Pioneers、Weapons Hub 分别补充更新证据、证据分层、角色路线与武器资料边界；8 个 Pioneer 详情页都增加了实战使用建议。
+- Updates 新增 2026-09-01 官方 Community 记录：开发者称 8 月 Pioneers 提取金额超过 $100,000，并明确标注为 developer-reported aggregate，不写成个人收入、平均收益或盈利保证；页面链接回官方公告并注明核查日期。
+- 使用 ImageGen 生成原创非官方更新日志静物插图，压缩为 `assets/update-log.jpg`（1200×800），带尺寸、lazy loading、async decoding、alt 与图注；不含官方 Logo、可读界面或现金收益承诺视觉。
+- 新增可复用脚本 `scripts/enrich_content.py`，用于幂等补充本批次内容并更新 sitemap lastmod。SEO 审计仍为 35 个 HTML、34 个可索引页面、34 个唯一 title、34 条 sitemap、0 errors、0 warnings；本地 HTTP 检查 34/34 返回 200，桌面与 390px 移动端新增 Updates 页面显示正常。
+- 仍遵守“未知就标未知”：武器伤害、射程、装填、耐久、获取位置和收益分布没有官方完整数据时不做数字猜测；所有新内容仍保持非官方 Wiki 身份与来源分层。

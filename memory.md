@@ -245,3 +245,11 @@
 - Legit 页单独过滤后，已显示的真实查询为 `fatal frontier 1869 scam`（2 impressions）与 `does fatal frontier pay real money`（1 impression），均 0 clicks；后续若优化 CTR，标题与 description 应优先回应 scam / real money 疑问，但不要写成收益承诺。
 - 最近 7 天站点查询还包括 `fatal frontier 1869 cost`、`fatal frontier 1869 steam`、`when did this game release`、`how much is 1000 greenbacks worth` 等，说明 cost、platform、release、currency FAQ 是早期长尾入口。
 - HTTP 首页当前返回 308 Permanent Redirect 到 HTTPS，HTTPS 返回 200；sitemap 仍统一 HTTPS。GSC 同时出现 http 与 https 首页记录属于历史/规范化收敛过程，当前没有证据表明需要更换跳转规则。
+
+## 2026-09-09 GSC 驱动的 CTR 与 Launcher 优化
+
+- 根据真实 query 明细，Legit 页不再把页面平均排名误读成 `is fatal frontier 1869 legit` 单词排名；优先承接已经接近首页的 `scam`、`pay real money` 与相关 legitimacy 意图。
+- Legit 页采用 Title `Fatal Frontier 1869 Legit or Scam? Real Payout Evidence`，同步改写 Meta、OG、Twitter、H1、首屏结论、H2 和 FAQ schema；结论明确“游戏与提款机制真实存在，但盈利和普遍成功未被证明”，避免把 payout 写成收益承诺。
+- 暂不拆分新的 scam、real-money 或 payout-proof 页面，避免与现有 Legit、Payout Methods、How to Make Money 页面争抢相同意图；后续以 GSC 完整 query 数据决定是否拆页。
+- Launcher 页保留已有高 CTR 的 Title `Fatal Frontier 1869 Launcher Not Working — Fix Guide`，新增快速故障矩阵、startup crash、stuck download/update、证据保留与安全上报内容，正文约 1450 个可见英文词。
+- Guides Hub 与 Download / Early Access 页新增描述性上下文内链指向 Launcher 故障页；FAQ/HowTo JSON-LD 与 sitemap lastmod 同步更新。全站审计 35 个 HTML、34 个可索引页面、0 errors、0 warnings，本地 sitemap 34/34 URL 返回 200；桌面和 390px 移动端无横向溢出。

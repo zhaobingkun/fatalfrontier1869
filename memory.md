@@ -236,3 +236,12 @@
 - 使用 ImageGen 生成原创非官方更新日志静物插图，压缩为 `assets/update-log.jpg`（1200×800），带尺寸、lazy loading、async decoding、alt 与图注；不含官方 Logo、可读界面或现金收益承诺视觉。
 - 新增可复用脚本 `scripts/enrich_content.py`，用于幂等补充本批次内容并更新 sitemap lastmod。SEO 审计仍为 35 个 HTML、34 个可索引页面、34 个唯一 title、34 条 sitemap、0 errors、0 warnings；本地 HTTP 检查 34/34 返回 200，桌面与 390px 移动端新增 Updates 页面显示正常。
 - 仍遵守“未知就标未知”：武器伤害、射程、装填、耐久、获取位置和收益分布没有官方完整数据时不做数字猜测；所有新内容仍保持非官方 Wiki 身份与来源分层。
+
+## 2026-09-08 GSC 实时快照
+
+- 通过已登录的 Google Search Console 直接核查 `sc-domain:fatalfrontier1869.wiki`；报告显示“上次更新日期：6 小时前”，但当前可用数据仍只到 2026-09-06，没有 09-07 或 09-08 的搜索数据。
+- 最近 7 天（2026-08-31 至 2026-09-06）：8 clicks、310 impressions、CTR 2.6%、平均排名 6.7。过去 3 个月页面总览：12 clicks、442 impressions、CTR 2.7%、平均排名 9.1。
+- 最近 7 天页面表现：`money/how-to-make-money.html` 2/73、`guides/is-fatal-frontier-1869-free.html` 2/49、`guides/launcher-troubleshooting.html` 2/27、`money/payout-methods.html` 1/38；Legit 页 0/48、平均排名 7.5；`systems/gold-and-loot.html` 0/20；download 页 0/16；greenbacks 页 0/16。
+- Legit 页单独过滤后，已显示的真实查询为 `fatal frontier 1869 scam`（2 impressions）与 `does fatal frontier pay real money`（1 impression），均 0 clicks；后续若优化 CTR，标题与 description 应优先回应 scam / real money 疑问，但不要写成收益承诺。
+- 最近 7 天站点查询还包括 `fatal frontier 1869 cost`、`fatal frontier 1869 steam`、`when did this game release`、`how much is 1000 greenbacks worth` 等，说明 cost、platform、release、currency FAQ 是早期长尾入口。
+- HTTP 首页当前返回 308 Permanent Redirect 到 HTTPS，HTTPS 返回 200；sitemap 仍统一 HTTPS。GSC 同时出现 http 与 https 首页记录属于历史/规范化收敛过程，当前没有证据表明需要更换跳转规则。

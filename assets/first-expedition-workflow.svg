@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="440" viewBox="0 0 900 440" role="img" aria-labelledby="title desc">
+<title id="title">Beginner practice workflow</title><desc id="desc">Recommended practice: Tutorial, equip a weapon, observe recovery, inspect a trade, choose an exit and verify the Lobby. This is not a playtest or a map.</desc>
+<rect width="900" height="440" fill="#090909"/>
+<style>text{font-family:Arial,sans-serif;fill:#fffdf7}.title{font-size:30px;font-weight:700}.label{font-size:15px;letter-spacing:2px;fill:#e0c27a}.heading{font-size:25px;font-weight:700}.body{font-size:21px;fill:#bdb6ac}.note{font-size:17px;fill:#bdb6ac}.line{fill:none;stroke:#e0c27a;stroke-width:2}</style>
+
+<text x="30" y="46" class="title">FIRST EXPEDITION / PRACTICE SHEET</text>
+<text x="30" y="76" class="label">RECOMMENDED LEARNING ORDER · NOT A RECORDED RUN</text>
+<rect x="30" y="112" width="260" height="116" fill="#11100e" stroke="#e0c27a"/><text x="48" y="140" class="label">01 / PRACTICE</text><text x="48" y="173" font-size="20" font-weight="700">TUTORIAL</text><text x="48" y="204" font-size="16" fill="#bdb6ac">Learn the on-screen controls</text>
+<rect x="320" y="112" width="260" height="116" fill="#11100e" stroke="#e0c27a"/><text x="338" y="140" class="label">02 / PRACTICE</text><text x="338" y="173" font-size="20" font-weight="700">EQUIP</text><text x="338" y="204" font-size="16" fill="#bdb6ac">Confirm the weapon is equipped</text>
+<rect x="610" y="112" width="260" height="116" fill="#11100e" stroke="#e0c27a"/><text x="628" y="140" class="label">03 / PRACTICE</text><text x="628" y="173" font-size="20" font-weight="700">RECOVER</text><text x="628" y="204" font-size="16" fill="#bdb6ac">Observe health and energy</text>
+<rect x="30" y="250" width="260" height="116" fill="#11100e" stroke="#e0c27a"/><text x="48" y="278" class="label">04 / PRACTICE</text><text x="48" y="311" font-size="20" font-weight="700">TRADE</text><text x="48" y="342" font-size="16" fill="#bdb6ac">Read item, quantity and price</text>
+<rect x="320" y="250" width="260" height="116" fill="#11100e" stroke="#e0c27a"/><text x="338" y="278" class="label">05 / PRACTICE</text><text x="338" y="311" font-size="20" font-weight="700">CHOOSE AN EXIT</text><text x="338" y="342" font-size="16" fill="#bdb6ac">Check Steamer or Signal Fire</text>
+<rect x="610" y="250" width="260" height="116" fill="#11100e" stroke="#e0c27a"/><text x="628" y="278" class="label">06 / PRACTICE</text><text x="628" y="311" font-size="20" font-weight="700">VERIFY THE LOBBY</text><text x="628" y="342" font-size="16" fill="#bdb6ac">Separate Save from extraction</text>
+<text x="450" y="409" text-anchor="middle" class="note">Read left to right. Tick the HTML checklist only after observing each action.</text>
+</svg>

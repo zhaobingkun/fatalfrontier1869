@@ -253,3 +253,17 @@
 - 暂不拆分新的 scam、real-money 或 payout-proof 页面，避免与现有 Legit、Payout Methods、How to Make Money 页面争抢相同意图；后续以 GSC 完整 query 数据决定是否拆页。
 - Launcher 页保留已有高 CTR 的 Title `Fatal Frontier 1869 Launcher Not Working — Fix Guide`，新增快速故障矩阵、startup crash、stuck download/update、证据保留与安全上报内容，正文约 1450 个可见英文词。
 - Guides Hub 与 Download / Early Access 页新增描述性上下文内链指向 Launcher 故障页；FAQ/HowTo JSON-LD 与 sitemap lastmod 同步更新。全站审计 35 个 HTML、34 个可索引页面、0 errors、0 warnings，本地 sitemap 34/34 URL 返回 200；桌面和 390px 移动端无横向溢出。
+
+
+## 2026-09-15 实用图解与证据检查清单批次
+
+- 用户希望优先制作别人没有的实用内容；本批次加深现有五个意图页面，不新增重复 SEO URL，不做未经记录的“实测”宣传。
+- 官方 FAQ、Terms、Support 与 Pioneers 重新核查；提现分阶段检查引用 Terms 第 3、6 节，保留 FAQ“通常当天”与 Terms“可能五个或更多工作日”的差异，强调不是付款保证。
+- 新手页新增可勾选学习任务、可观察完成条件及 Save/Extraction 区别；撤离页新增南岸轮船/西岸信号火 SVG 示意与需求对照，不提供伪造坐标、救援计时或最短路线。
+- Launcher 页新增截图采集/隐私遮挡示意、各故障阶段需保留的证据和可下载空白 support-report；它不是当前客户端截图，未产生虚假错误码或真实账户/收据。
+- Equipment 页新增武器、Justice、Pickaxe、Pass/Claims 的用途比较及同版本控制变量测试方法；没有虚构伤害、重量、装填、收益或最佳装备评分。
+- 核查发现官方 Pioneer 属性已不同于旧记录；本轮已同步 Pioneers Hub、Wade、Wyatt、Clara、Russell、Boomstick Bob、Skookum Joe、Jane 和 Justice 关联段落：Wade +5% Melee / +1 Day View，Wyatt 100/110/100，Clara 75/80/70，Russell +25% Mining / +1 Sprint / +1 Stealth，Bob 80 Energy 且含 +10% Ranged，Skookum Joe +2 Move，Jane +2 Day View。
+- 使用 frontend-design 的现有视觉约束：黑底、金线、白字、轻量代码原生图解；选择 SVG 而非 AI 伪截图。原始 HTML 保留正文、对照、检查表及证据边界，原 GA4 不改动。
+- 浏览器验收发现旧桌面固定侧栏内容约 1850px，但 900px 窗口下 overflow-y 为 visible，导致下方菜单不能点击；本轮补充桌面侧栏滚动及手机展开菜单最大高度，维持菜单分组和内容切换方式。
+- 手机视觉复查发现 grid 子项 article 的 min-width:auto 会被 520px 表格撑宽；site-shell 的 overflow:hidden 使只测 document.scrollWidth 的检查误报正常。补 article min-width:0，并增加正文/表格外层边界检查，宽表格仅在自身区域横滑。
+- 用户追加要求修正 Codex 项目名称；实际 Git 目录已为 /Users/zhaobingkun/dev/FatalFrontier1869，旧 1898 目录不存在，网站正式名称已正确。尝试备份并修改保存配置后，运行中的 App 又恢复旧 name/rootPaths；因此侧栏改名尚未完成，不再反复修改内部配置，需要通过 App 重新添加正确目录并保留当前任务。

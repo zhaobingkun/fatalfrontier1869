@@ -3,6 +3,8 @@
 ## 项目背景
 
 - 项目正式名称为 **Fatal Frontier 1869 Wiki**，目标游戏官方名称为 **Fatal Frontier 1869**。
+- 当前实际项目目录为 `/Users/zhaobingkun/dev/FatalFrontier1869`；`FatalFrontier1898` 是旧名称，旧目录已不存在。后续终端命令应显式使用正确目录。
+- 2026-09-15 核查：Codex 保存的项目仍关联旧名称/路径；运行中修改内部配置会被 App 回写，不应反复修改。侧栏需通过 App 重新添加正确目录后核验，保留现有任务与 Git 仓库。
 - 游戏由 Paydirt Games 开发，Windows PC 独占，通过 Paydirt Launcher 分发。
 - 截至 2026-08-26，游戏处于 Early Access 阶段，核心玩法包含生存、探索、战斗、资源管理、淘金、撤离、角色培养和任务。
 

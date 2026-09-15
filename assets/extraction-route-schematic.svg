@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="480" viewBox="0 0 900 480" role="img" aria-labelledby="title desc">
+<title id="title">Fatal Frontier 1869 extraction route schematic</title><desc id="desc">Southern coast: a ticket and an arriving Steamer. Western coast: light a Signal Fire, face hostile attention and complete rescue. Only completed extraction returns the recovered balance to the Lobby. Not a coordinate map.</desc>
+<rect width="900" height="480" fill="#090909"/>
+<style>text{font-family:Arial,sans-serif;fill:#fffdf7}.title{font-size:30px;font-weight:700}.label{font-size:15px;letter-spacing:2px;fill:#e0c27a}.heading{font-size:25px;font-weight:700}.body{font-size:21px;fill:#bdb6ac}.note{font-size:17px;fill:#bdb6ac}.line{fill:none;stroke:#e0c27a;stroke-width:2}</style>
+
+<text x="30" y="46" class="title">TWO WAYS OUT</text>
+<text x="30" y="76" class="label">ROUTE SCHEMATIC · NOT A COORDINATE MAP</text>
+<path d="M30 100H870" class="line"/>
+<rect x="30" y="125" width="405" height="218" fill="#11100e" stroke="#e0c27a"/>
+<rect x="465" y="125" width="405" height="218" fill="#11100e" stroke="#e0c27a"/>
+<text x="54" y="158" class="label">SOUTHERN COAST</text>
+<text x="54" y="198" class="heading">STEAMER / DOCK</text>
+<text x="54" y="237" class="body">Obtain a mining-camp ticket</text>
+<text x="54" y="274" class="body">Confirm the ship is available</text>
+<text x="54" y="313" class="note">No exact arrival day verified here</text>
+<text x="489" y="158" class="label">WESTERN COAST</text>
+<text x="489" y="198" class="heading">COASTAL SIGNAL FIRE</text>
+<text x="489" y="237" class="body">Light the fire; expect enemies</text>
+<text x="489" y="274" class="body">Complete the rescue sequence</text>
+<text x="489" y="313" class="note">No rescue timer verified here</text>
+<path d="M232 343V368H667V343M450 368V390" class="line"/>
+<path d="m442 382 8 8 8-8" class="line"/>
+<text x="450" y="424" text-anchor="middle" class="heading">COMPLETED EXTRACTION → GAME LOBBY</text>
+<text x="450" y="457" text-anchor="middle" class="note">Saving at camp is not the same as finishing an expedition.</text>
+
+</svg>

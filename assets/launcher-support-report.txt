@@ -1,0 +1,19 @@
+Fatal Frontier 1869 — blank technical support report
+This is an unofficial template, not a request confirmation.
+Send a completed report only to official Paydirt Support.
+Official support: https://www.fatalfrontier.com/support
+
+Failure stage:
+Action immediately before failure:
+Exact message or code (if shown):
+Date / time / time zone:
+Windows version:
+Launcher version / client build (if shown):
+Did a game window appear?
+Download percentage and observation times (if relevant):
+Safe checks already tried:
+Does a request confirmation exist? (if relevant):
+Privacy-safe screenshot attached:
+
+Leave unknown values as "not shown".
+Do not include passwords, authentication codes, ID documents or payment details.

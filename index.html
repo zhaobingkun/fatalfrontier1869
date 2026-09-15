@@ -301,6 +301,51 @@ body{background:#080808;background-image:none}
   .download-callout{grid-template-columns:1fr;padding:20px}
   .download-callout .button{width:100%;text-align:center}
 }
+
+/* Practical field sheets: brass route lines and readable, observable checkpoints. */
+.field-evidence{padding:14px 0;border-top:1px solid rgba(224,194,122,.26);border-bottom:1px solid rgba(224,194,122,.26);color:#aaa39a;font-size:.86rem}
+.field-evidence strong{color:#e0c27a}
+.field-figure{margin:24px 0 30px;border:1px solid rgba(224,194,122,.3)}
+.field-figure img{display:block;width:100%;height:auto;background:#090909}
+.field-figure figcaption{padding:12px 14px;color:#aaa39a;font-size:.82rem;line-height:1.6}
+.field-figure figcaption a{display:block;color:#e0c27a}
+.field-checklist{min-width:0;margin:24px 0 12px;padding:8px 18px 16px;border:1px solid rgba(224,194,122,.32)}
+.field-checklist legend{max-width:100%;padding:0 8px;color:#e0c27a;font:600 1rem/1.5 var(--condensed)}
+.field-check{display:flex;align-items:flex-start;gap:14px;padding:15px 0;border-bottom:1px solid rgba(224,194,122,.18);cursor:pointer}
+.field-check:last-child{border-bottom:0}
+.field-check input{flex:0 0 auto;width:22px;height:22px;margin:3px 0 0;accent-color:#e0c27a;cursor:pointer}
+.field-check strong,.field-check small{display:block}
+.field-check strong{color:#fffdf7;font-size:.95rem}
+.field-check small{margin-top:5px;color:#aaa39a;font-size:.86rem;line-height:1.6}
+.field-check input:checked+span strong{color:#e0c27a}
+.field-note{color:#aaa39a;font-size:.82rem}
+.field-table-wrap{max-width:100%;overflow-x:auto;margin:24px 0}
+.field-table-wrap .guide-table{margin:0;min-width:550px}
+.field-table-wrap caption{text-align:left;color:#e0c27a;padding:0 0 12px;font-size:.86rem}
+.field-table-wrap th[scope="row"]{color:#e0c27a;white-space:normal;font-family:var(--body);text-transform:none;letter-spacing:normal}
+.field-stage-line{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px;list-style:none!important;padding:0!important;margin:24px 0 30px!important}
+.field-stage-line li{position:relative;padding:12px 0!important;border-top:2px solid #e0c27a}
+.field-stage-line li:not(:last-child):after{content:'→';position:absolute;right:0;top:9px;color:#e0c27a}
+.field-stage-line strong,.field-stage-line span{display:block}
+.field-stage-line strong{color:#fffdf7;font-size:.88rem;padding-right:12px}
+.field-stage-line span{margin-top:8px;color:#aaa39a;font-size:.78rem;line-height:1.5}
+.field-troubleshooting details{border-top:1px solid rgba(224,194,122,.28);padding:0 0 4px}
+.field-troubleshooting details:last-child{border-bottom:1px solid rgba(224,194,122,.28)}
+.field-troubleshooting summary{min-height:48px;padding:15px 8px;color:#e0c27a;font-weight:600;cursor:pointer;line-height:1.55}
+.field-troubleshooting details p{padding:0 8px}
+.field-troubleshooting details[open] summary{color:#fffdf7}
+.field-decisions{margin:24px 0}
+.field-decisions>div{padding:18px 0;border-bottom:1px solid rgba(224,194,122,.22)}
+.field-decisions dt{color:#e0c27a;font-weight:600}
+.field-decisions dd{margin:8px 0 0;color:#aaa39a;line-height:1.7}
+.field-report{max-width:100%;overflow:auto;white-space:pre-wrap;overflow-wrap:anywhere;padding:18px;border:1px solid rgba(224,194,122,.32);color:#fffdf7;background:#11100e;font:.83rem/1.9 var(--mono)}
+.field-check input:focus-visible,.field-table-wrap:focus-visible,.field-report:focus-visible,.field-troubleshooting summary:focus-visible{outline:2px solid #e0c27a;outline-offset:4px}
+@media(max-width:620px){.field-stage-line{grid-template-columns:1fr;gap:0}.field-stage-line li{padding:13px 0!important}.field-stage-line li:not(:last-child):after{content:'↓';right:12px;top:12px}.field-checklist{padding:8px 12px 12px}.field-check{gap:12px}.field-table-wrap .guide-table{min-width:520px}}
+/* Keep lower wiki navigation reachable in short viewports. */
+@media(min-width:861px){.site-header{height:100dvh;overflow-y:auto;overscroll-behavior:contain}}
+@media(max-width:860px){.site-nav.is-open{max-height:calc(100dvh - 100px);overflow-y:auto;overscroll-behavior:contain}}
+/* Grid children must shrink before their comparison tables scroll. */
+.article{min-width:0}.field-table-wrap{width:100%;min-width:0}
 </style>
   <meta property="og:type" content="website"><meta property="og:title" content="Fatal Frontier 1869 Wiki — Guides, Pioneers &amp; Gold"><meta property="og:description" content="A practical, unofficial field guide to surviving Alaska, leveling Pioneers and understanding gold prospecting in Fatal Frontier 1869."><meta property="og:url" content="https://fatalfrontier1869.wiki/"><meta property="og:site_name" content="Fatal Frontier 1869 Wiki"><meta property="og:image" content="https://fatalfrontier1869.wiki/assets/og-card.svg"><meta name="twitter:card" content="summary"><meta name="twitter:title" content="Fatal Frontier 1869 Wiki — Guides, Pioneers &amp; Gold"><meta name="twitter:description" content="Practical guides for Fatal Frontier 1869: survival, prospecting, extraction, pioneers and Early Access updates."><meta name="twitter:image" content="https://fatalfrontier1869.wiki/assets/og-card.svg">
   <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","name":"Fatal Frontier 1869 Wiki","alternateName":"FF1869 Wiki","url":"https://fatalfrontier1869.wiki/","description":"An unofficial field guide to Fatal Frontier 1869."},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is Fatal Frontier 1869?","acceptedAnswer":{"@type":"Answer","text":"Fatal Frontier 1869 is a single-player PvE survival and action role-playing game for Windows PC, set in a generated version of 1869–1870 Alaska."}},{"@type":"Question","name":"Is Fatal Frontier 1869 free?","acceptedAnswer":{"@type":"Answer","text":"The base survival game is free to download and play. Optional Prospecting Mode features can cost money and have eligibility restrictions."}},{"@type":"Question","name":"Is this the official Fatal Frontier website?","acceptedAnswer":{"@type":"Answer","text":"No. Fatal Frontier 1869 Wiki is an independent, unofficial guide and is not affiliated with Paydirt Games."}}]}]}</script>

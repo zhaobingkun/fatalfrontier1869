@@ -52,3 +52,7 @@ See [LAUNCH-CHECKLIST.md](LAUNCH-CHECKLIST.md) for the complete pre-launch and p
 ## Editorial note
 
 This project is not affiliated with Paydirt Games. Official claims, independent reviews, community reports and unverified field data are labeled separately. Nothing on the site promises earnings or financial returns.
+
+## Real-client evidence
+
+Follow [`docs/field-capture-runbook.md`](docs/field-capture-runbook.md) before collecting screenshots. Keep originals only under ignored `field-captures/raw/` and complete [`docs/field-capture-manifest.csv`](docs/field-capture-manifest.csv) before publishing a redacted image. Generated illustrations are never labelled as playtest evidence.

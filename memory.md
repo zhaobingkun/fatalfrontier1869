@@ -267,3 +267,10 @@
 - 浏览器验收发现旧桌面固定侧栏内容约 1850px，但 900px 窗口下 overflow-y 为 visible，导致下方菜单不能点击；本轮补充桌面侧栏滚动及手机展开菜单最大高度，维持菜单分组和内容切换方式。
 - 手机视觉复查发现 grid 子项 article 的 min-width:auto 会被 520px 表格撑宽；site-shell 的 overflow:hidden 使只测 document.scrollWidth 的检查误报正常。补 article min-width:0，并增加正文/表格外层边界检查，宽表格仅在自身区域横滑。
 - 用户追加要求修正 Codex 项目名称；实际 Git 目录已为 /Users/zhaobingkun/dev/FatalFrontier1869，旧 1898 目录不存在，网站正式名称已正确。尝试备份并修改保存配置后，运行中的 App 又恢复旧 name/rootPaths；因此侧栏改名尚未完成，不再反复修改内部配置，需要通过 App 重新添加正确目录并保留当前任务。
+
+## 2026-09-17 真实客户端证据采集准备
+
+- 仓库中没有 Windows 客户端截图或录屏，现有 JPG/WebP 均为原创说明性插图，未把任何素材改标为实测。
+- 新增真实截图 runbook 与 manifest，覆盖 Launcher、第一局、撤离、装备、Traits、Quest 和提现共 22 个证据编号；原图目录被 Git 忽略，发布前必须遮挡隐私并移除元数据。
+- 错误只记录自然发生的问题；不因编辑购买 Claims、绕过资格或提交身份材料。真实素材到位前继续保留“编辑示意，非客户端实测”的标注。
+- 9 月 17 日 GSC 导出过去 28 天共 22 clicks、703 impressions、CTR 3.13%。9 月 7–14 日为 10 clicks / 261 impressions / CTR 3.83%，高于截至 9 月 6 日的 2.71%；真实截图优先投向 Getting Started、Extraction、Legit 和 Launcher。

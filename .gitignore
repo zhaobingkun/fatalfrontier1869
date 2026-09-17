@@ -3,3 +3,6 @@
 __pycache__/
 .idea/
 .vscode/
+
+# Unedited captures can contain private account information.
+field-captures/raw/

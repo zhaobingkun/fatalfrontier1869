@@ -274,3 +274,5 @@
 - 新增真实截图 runbook 与 manifest，覆盖 Launcher、第一局、撤离、装备、Traits、Quest 和提现共 22 个证据编号；原图目录被 Git 忽略，发布前必须遮挡隐私并移除元数据。
 - 错误只记录自然发生的问题；不因编辑购买 Claims、绕过资格或提交身份材料。真实素材到位前继续保留“编辑示意，非客户端实测”的标注。
 - 9 月 17 日 GSC 导出过去 28 天共 22 clicks、703 impressions、CTR 3.13%。9 月 7–14 日为 10 clicks / 261 impressions / CTR 3.83%，高于截至 9 月 6 日的 2.71%；真实截图优先投向 Getting Started、Extraction、Legit 和 Launcher。
+- 在用户没有 Windows 客户端素材的情况下，改用可合法嵌入的公开实机视频，不复制或下载第三方帧图。Getting Started、Extraction、Payout 三页分别嵌入同一独立完整流程视频的 Tutorial（14:13）、Extraction（1:33:38）和 Cash-out（1:38:21）章节。
+- 每个视频都标明作者、发布日期、第三方来源与证据边界；Cash-out 明确不是审计收据、平均收益或盈利承诺。使用 `youtube-nocookie.com`、lazy iframe、16:9 响应式布局，并在 Privacy 页披露嵌入可能向 Google/YouTube 发送技术数据。

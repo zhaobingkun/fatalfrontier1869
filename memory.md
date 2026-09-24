@@ -276,3 +276,10 @@
 - 9 月 17 日 GSC 导出过去 28 天共 22 clicks、703 impressions、CTR 3.13%。9 月 7–14 日为 10 clicks / 261 impressions / CTR 3.83%，高于截至 9 月 6 日的 2.71%；真实截图优先投向 Getting Started、Extraction、Legit 和 Launcher。
 - 在用户没有 Windows 客户端素材的情况下，改用可合法嵌入的公开实机视频，不复制或下载第三方帧图。Getting Started、Extraction、Payout 三页分别嵌入同一独立完整流程视频的 Tutorial（14:13）、Extraction（1:33:38）和 Cash-out（1:38:21）章节。
 - 每个视频都标明作者、发布日期、第三方来源与证据边界；Cash-out 明确不是审计收据、平均收益或盈利承诺。使用 `youtube-nocookie.com`、lazy iframe、16:9 响应式布局，并在 Privacy 页披露嵌入可能向 Google/YouTube 发送技术数据。
+
+## 2026-09-24 官方 Discord 路由更新
+
+- 每日自动化早晨因 `.git/FETCH_HEAD` 权限阻塞；汇总补跑用授权的同一条 `git pull --ff-only origin main` 成功，仓库已是最新状态。
+- 官方 Community 首页当前新增并突出 `JOIN THE OFFICIAL FATAL FRONTIER 1869 DISCORD`，公开邀请链接为 `https://discord.gg/SpQ62ksxS`，用途包括开发者交流、错误反馈、功能建议和更新消息。页面未显示这段公告的独立发布日期，因此站点只记录 2026-09-24 核验日期，不编造发布日期。
+- `updates/` 增加官方 Discord 说明与事实边界；Launcher 排错页把泛化的 Discord 提示更新为官方邀请链接，同时继续要求账号、支付和身份问题走正式 Support。
+- 官方 FAQ、Terms、Support、Download、Reviews 和 Pioneers 同步复核。FAQ 当前保存远征的说明已被现有 Getting Started 页面覆盖；开发者宣传数字和资格比例未扩写为独立事实。

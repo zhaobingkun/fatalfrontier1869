@@ -283,3 +283,13 @@
 - 官方 Community 首页当前新增并突出 `JOIN THE OFFICIAL FATAL FRONTIER 1869 DISCORD`，公开邀请链接为 `https://discord.gg/SpQ62ksxS`，用途包括开发者交流、错误反馈、功能建议和更新消息。页面未显示这段公告的独立发布日期，因此站点只记录 2026-09-24 核验日期，不编造发布日期。
 - `updates/` 增加官方 Discord 说明与事实边界；Launcher 排错页把泛化的 Discord 提示更新为官方邀请链接，同时继续要求账号、支付和身份问题走正式 Support。
 - 官方 FAQ、Terms、Support、Download、Reviews 和 Pioneers 同步复核。FAQ 当前保存远征的说明已被现有 Getting Started 页面覆盖；开发者宣传数字和资格比例未扩写为独立事实。
+
+## 2026-09-26 AdSense 低价值内容预审
+
+- 全站静态审计仍为 35 个 HTML、34 个可索引页面、34 个唯一 title/canonical、34 条 sitemap、0 errors、0 warnings；未发现 AdSense 代码或 `ads.txt`，当前只有 GA4。
+- 正文扫描显示主力攻略约 700–2,100 词，具备明显的原创说明、流程、限制和来源；页面两两词集相似度未发现高于 0.55 的组合，因此整站不属于明显的批量重复内容。
+- 主要低价值风险集中在少数页面：Money Stories 主要整理开发者 testimonials，Justice 武器页已确认信息较少，8 个 Pioneer 详情页约 335–392 词且共享两句模板化提示。Hub 与 Privacy 虽较短，但属于导航或政策页，不应靠填字扩充，也不建议放广告。
+- 更大的 AdSense 风险是现金游戏分类。Google Publisher Restrictions 将“付费或投入价值以赢取真实金额/奖品”的网络游戏列为 online gambling 范畴；教育说明可不受限，但推广、聚合或直接引导参与的页面可能限制广告。站内 money、payout、claims、legit 和 money-stories 页面应保持教育与风险说明，不做收益承诺，并优先设为不投放广告；敏感页不应使用强下载 CTA。
+- 申请前优先补一个真实可用的站点联系渠道；对 Money Stories 和 Justice 页面选择补充独立实测证据，或合并后 301，避免仅靠改写官方资料维持单页。角色页应增加各自独有的实测、对照或版本截图，而不是机械加字。
+- AdSense 获批后再使用真实 publisher ID 生成 `ads.txt`，同步更新 Privacy，并为 EEA、UK、Switzerland 流量配置 Google 认可的 CMP。404、About、Privacy、短 Hub、现金/提现/Claims 等敏感页面应默认排除广告，优先在完整的新手、玩法、排错和装备攻略上手动投放。
+- 若审核失败，必须先保存 AdSense 后台的原文原因和截图再修：`low value content` 走合并/补证据/去模板路线；policy restriction 走敏感页广告排除与去推广路线；ownership/crawler 则单独检查验证代码、HTTPS、robots 和 Cloudflare。不要只增加字数后反复送审。

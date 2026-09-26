@@ -1,4 +1,16 @@
 {
+  "redirects": [
+    {
+      "source": "/reviews/money-stories.html",
+      "destination": "/reviews/is-fatal-frontier-1869-legit.html#testimonials",
+      "permanent": true
+    },
+    {
+      "source": "/weapons/justice-double-barreled-shotgun.html",
+      "destination": "/weapons/#justice",
+      "permanent": true
+    }
+  ],
   "headers": [
     {
       "source": "/assets/fonts/(.*)",

@@ -38,20 +38,19 @@ const wikiNav = [
     ['Gold & loot', '/systems/gold-and-loot.html', 'gold'],
     ['Claims & Skill Check', '/systems/claims-and-skill-check.html', 'gold'],
     ['Greenbacks', '/systems/greenbacks.html', 'money'],
-    ['Payout methods', '/money/payout-methods.html', 'money'],
-    ['Money stories', '/reviews/money-stories.html', 'money']
+    ['Payout methods', '/money/payout-methods.html', 'money']
   ] },
   { title: 'Gear', links: [
     ['Weapons', '/weapons/', 'weapons'],
     ['Tools & equipment', '/systems/tools-and-equipment.html', 'equipment'],
-    ['Traits & loadouts', '/systems/traits-and-loadouts.html', 'traits'],
-    ['Justice shotgun', '/weapons/justice-double-barreled-shotgun.html', 'weapons']
+    ['Traits & loadouts', '/systems/traits-and-loadouts.html', 'traits']
   ] },
   { title: 'Frontier access', links: [
     ['Download & Early Access', '/guides/download-and-early-access.html', 'download'],
     ['Launcher fixes', '/guides/launcher-troubleshooting.html', 'systems'],
     ['About this Wiki', '/about.html', 'official'],
     ['Privacy', '/privacy.html', 'official'],
+    ['Contact', '/contact.html', 'official'],
     ['Download the game ↗', 'https://www.fatalfrontier.com/lpdownload', 'download', 'download-link'],
     ['Official site ↗', 'https://www.fatalfrontier.com/', 'official']
   ] }

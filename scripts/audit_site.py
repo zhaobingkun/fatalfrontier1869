@@ -127,8 +127,8 @@ def main() -> int:
         pages[path] = parser
 
         robots = meta_value(parser, "name", "robots").lower()
-        is_404 = rel == "404.html"
-        indexable = "noindex" not in robots and not is_404
+        expected_noindex = rel in {"404.html", "contact.html"}
+        indexable = "noindex" not in robots and not expected_noindex
         title = " ".join("".join(parser.title_parts).split())
         description = meta_value(parser, "name", "description")
 
@@ -184,7 +184,7 @@ def main() -> int:
             if not parser.json_ld:
                 errors.append(f"{rel}: missing JSON-LD")
             titles.setdefault(title, []).append(rel)
-        elif not is_404:
+        elif not expected_noindex:
             warnings.append(f"{rel}: non-indexable page")
 
         for index, block in enumerate(parser.json_ld, start=1):

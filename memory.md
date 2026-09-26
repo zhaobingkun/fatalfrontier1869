@@ -293,3 +293,12 @@
 - 申请前优先补一个真实可用的站点联系渠道；对 Money Stories 和 Justice 页面选择补充独立实测证据，或合并后 301，避免仅靠改写官方资料维持单页。角色页应增加各自独有的实测、对照或版本截图，而不是机械加字。
 - AdSense 获批后再使用真实 publisher ID 生成 `ads.txt`，同步更新 Privacy，并为 EEA、UK、Switzerland 流量配置 Google 认可的 CMP。404、About、Privacy、短 Hub、现金/提现/Claims 等敏感页面应默认排除广告，优先在完整的新手、玩法、排错和装备攻略上手动投放。
 - 若审核失败，必须先保存 AdSense 后台的原文原因和截图再修：`low value content` 走合并/补证据/去模板路线；policy restriction 走敏感页广告排除与去推广路线；ownership/crawler 则单独检查验证代码、HTTPS、robots 和 Cloudflare。不要只增加字数后反复送审。
+
+## 2026-09-26 AdSense 申请前低价值内容清理
+
+- 将主要依赖开发者 testimonials 的 `/reviews/money-stories.html` 合并进 Legit 证据页的 `#testimonials` 章节；将信息不足的 Justice 独立武器页合并进 `/weapons/#justice`。Vercel 为两个旧 URL 配置永久跳转，站内导航、正文内链、页脚和 sitemap 不再指向旧页。
+- Legit 页现在把官方精选 testimonial、独立评测、Reddit 个案、Terms 与未知数据放在同一证据层级中，避免单独成功故事看起来像收益样本；Weapons Hub 直接展示 Justice 已确认字段、未知字段和为什么不保留薄独立页。
+- 8 个 Pioneer 详情页分别增加角色特定的选择场景、同类角色对比、停止条件或控制变量测试规则；正文约 450–560 词。原先 8 页完全相同的两句 Build rule 已全部改为角色专属规则，长句重复扫描未再发现跨页重复。
+- 新增 `/contact.html`，通过公开 GitHub Issues 接收纠错、坏链、来源与署名问题；页面明确禁止提交密码、支付记录、余额或身份文件，并把账号/付款问题路由到官方 Support。Contact 设置 `noindex,follow`、不进 sitemap；About、Privacy 和动态左侧菜单均提供联系入口。
+- 当前全站为 34 个 HTML，其中 32 个可索引内容页、Contact 与 404 两个预期 noindex 页；sitemap 32 条。`scripts/audit_site.py` 明确允许这两个 noindex 页面，最终静态审计 0 errors / 0 warnings，Node、sitemap XML、Vercel JSON 与 diff whitespace 均通过，本地 sitemap 32/32 URL 返回 200。
+- 申请 AdSense 时仍应避免在 money、payout、claims、legit/testimonials、Privacy、About、Contact、404 和短 Hub 页面投放广告；优先只在完整玩法、新手、撤离、排错与装备攻略上投放。`ads.txt` 必须等真实 publisher ID 后再生成。

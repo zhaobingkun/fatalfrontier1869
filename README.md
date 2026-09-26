@@ -5,7 +5,7 @@ An unofficial, independent English-language Wiki and field guide for **Fatal Fro
 ## Project status
 
 - Static, crawlable HTML site
-- 34 indexable pages plus a custom 404 page
+- 32 indexable pages plus noindex Contact and custom 404 pages
 - Responsive Wiki layout with a fixed desktop sidebar and mobile menu
 - Unique title, description and canonical metadata per indexable page
 - Open Graph, Twitter metadata, JSON-LD, `robots.txt` and `sitemap.xml`
